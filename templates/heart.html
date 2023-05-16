@@ -1,0 +1,212 @@
+{% extends 'base.html'%}
+
+{% block title %} heart {% endblock %}
+{% block status %}active{% endblock %}
+
+
+{% block css %} 
+<link rel="stylesheet" href="../static/css/maicons.css">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css')}}">
+
+<link rel="stylesheet" href="../static/vendor/owl-carousel/css/owl.carousel.css">
+
+<link rel="stylesheet" href="../static/vendor/animate/animate.css">
+
+<link rel="stylesheet" href="../static/css/theme.css">
+
+{% endblock %}
+
+{% block body %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Dung-Tshap | Heart Disease Prediction</title>
+</head>
+<style>
+	
+	button {
+		background-color: #55BBA7;
+	}
+
+	h1, h2, h3, h4, h5 {
+		text-align: center;
+	}
+
+	form {
+		margin: 3% 5%;
+		border-radius:20px;
+	}
+
+	form fieldset {
+		padding: 3vw;
+		border-width: 1px;
+		border-style: solid;
+		border-radius: 20px;
+		border-color: white;
+		background-color: #fff;
+	}
+
+	fieldset h1 {
+		color: #b52e2e;
+		padding-bottom: 20px;
+		display: inline-block;
+		cursor: pointer;
+		font-size: 28px;
+		text-align: center;
+	}
+
+	fieldset label {
+		padding: 2vw;
+		font-size: 20px;
+		display: block;
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	fieldset input, fieldset select {
+		padding: 8px;
+		color: #938c8c;
+		display: block;
+		width: 100%;
+		border: none;
+		border-bottom: 1px solid #ccc;
+		margin-bottom: 2vh;
+	}
+
+	fieldset input:focus {
+		color: #000;
+	}
+
+	fieldset button {
+		color: #fff;
+		background-color: #55BBA7;
+		border-radius: 50px;
+		padding: 13px 8vw;
+		text-align: center;
+		letter-spacing: 0.9px;
+		text-decoration: none;
+		margin: 2vh auto;
+		display: block;
+		box-shadow: 0px 1px 3px 0px #55BBA7;
+		cursor: pointer;
+	}
+
+	.submit {
+		color: #fff;
+		background-color: #55BBA7;
+		border-radius: 3px;
+		padding: 13px 5vw;
+		text-align: center;
+		letter-spacing: 0.9px;
+		text-decoration: none;
+		margin: 2vh auto;
+		display: block;
+		box-shadow: 0px 1px 3px 0px #55BBA7;
+		cursor: pointer;
+	}
+
+	#link_to_edit {
+		padding-left: 45px;
+	}
+
+	.fieldset {
+		margin: 3% 5%;
+		padding: 3vw;
+		border-width: 25px;
+		border-style: ridge;
+		border-color: #257a7a;
+		box-shadow: 6px 13px 13px 0px black;
+		background-color: #ebfffa;
+	}
+	
+	@media screen and (min-width: 768px) {
+		form fieldset {
+			width: 60%;
+			margin: 0 auto;
+		}
+	}
+	
+	@media screen and (min-width: 1024px) {
+		form fieldset {
+			width: 50%;
+		}
+	}
+</style>
+<body id="form">
+    <h1 style="text-align:center; margin-top:50px;">Heart Disease Prediction</h1>
+    <h5 style="text-align:center;">Please enter the following details</h5>
+    <form action="{{ url_for('predictheart')}}" method="post" class="form-inline "  class='mb-5'  style=" background: linear-gradient(135deg, #8BC6EC, #9599E2);">
+        <fieldset  style="background: linear-gradient(135deg, #FFFFFF, #F4F7FC); box-shadow: 6px 13px 13px 0px rgba(3, 0, 0, 0.3);">
+            <div class="tabcontent" id="new">
+                <div class="form-group">
+                    <label for="Age">Age</label>
+                    <input  style="width:224px" class="form-control " type="number" name="Age" placeholder="" required="required"/>
+                  </div>
+                  <div class="form-group">
+                    <label for="sex">sex</label>
+					<select id="sex" name="sex" class="form-control" style="width:224px" >
+						<option class="form-control"  value="1">Female</option>
+						<option class="form-control"  value="0">Male</option>
+					</select>
+                    
+                  </div>
+                  <div class="form-group">
+                    <label for="Type of chest pain">Type of chest pain</label>
+    
+					<select id="CP" name="CP" class="form-control" style="width:224px" >
+						<option class="form-control"  value="0">No_pain</option>
+						<option class="form-control"  value="1">Normal</option>
+						<option class="form-control"  value="2">Mid</option>
+						<option class="form-control"  value="3">Severe</option>
+					</select>
+                  </div>
+                  <div class="form-group">
+                    <label for="Max. Heart Rate Achieved">Max. Heart Rate Achieved</label>
+                    <input  style="width:224px" class="form-control" type="number" name="Max. Heart Rate Achieved" placeholder="" required="required"/>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="Exerxise induces Angina">Exerxise induces Angina</label>
+					<select id="Angina" name="Angina" class="form-control" style="width:224px" >
+						<option class="form-control"  value="0">No</option>
+						<option class="form-control"  value="1">Yes</option>
+					</select>
+                  </div>
+                  <div class="form-group">
+                    <label for="ST depression induced by execrise">ST depression induced by execrise</label>
+                    <input  style="width:224px" class="form-control" type="number" name="ST depression induced by execrise" placeholder="" required="required"/>
+                  </div>
+                  <div class="form-group">
+                    <label for="Slope of the peak execrise">Slope of the peak execrise</label>
+                    <input  style="width:224px" class="form-control" type="number" name="Slope of the peak execrise" placeholder="" required="required"/>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="No. of Major Vessels">No. of Major Vessels</label>
+                    <input  style="width:224px" class="form-control" type="number" name="No. of Major Vessels" placeholder="" required="required"/>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="thal">thal</label>
+					<select id="Thal" name="Thal" class="form-control" style="width:224px" >
+						<option class="form-control"  value="0">Normal</option>
+						<option class="form-control"  value="1">Fixed defect</option>
+						<option class="form-control"  value="2">Reversable defect</option>
+					</select>
+				</div>
+
+					<button type="submit" class="btn btn-primary mt-3 wow zoomIn">Predict</button>
+
+            </div>
+        </fieldset>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+{% endblock %}

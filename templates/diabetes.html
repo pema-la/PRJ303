@@ -1,0 +1,191 @@
+{% extends 'base.html'%}
+
+{% block title %} Diabetes {% endblock %}
+{% block status %}active{% endblock %}
+
+
+{% block css %} 
+<link rel="stylesheet" href="../static/css/maicons.css">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css')}}">
+
+<link rel="stylesheet" href="../static/vendor/owl-carousel/css/owl.carousel.css">
+
+<link rel="stylesheet" href="../static/vendor/animate/animate.css">
+
+<link rel="stylesheet" href="../static/css/theme.css">
+
+{% endblock %}
+
+{% block body %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}"> -->
+	<title>Dung-Tshap | Diabetes Prediction</title>
+</head>
+<style>
+	
+	button {
+		background-color: #55BBA7;
+	}
+
+	h1, h2, h3, h4, h5 {
+		text-align: center;
+	}
+
+	form {
+		margin: 3% 5%;
+		border-radius:20px;
+	}
+
+	form fieldset {
+		padding: 3vw;
+		border-width: 1px;
+		border-style: solid;
+		border-radius: 20px;
+		border-color: white;
+		background-color: #fff;
+	}
+
+	fieldset h1 {
+		color: #b52e2e;
+		padding-bottom: 20px;
+		display: inline-block;
+		cursor: pointer;
+		font-size: 28px;
+		text-align: center;
+	}
+
+	fieldset label {
+		padding: 2vw;
+		font-size: 20px;
+		display: block;
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	fieldset input, fieldset select {
+		padding: 8px;
+		color: #938c8c;
+		display: block;
+		width: 100%;
+		border: none;
+		border-bottom: 1px solid #ccc;
+		margin-bottom: 2vh;
+	}
+
+	fieldset input:focus {
+		color: #000;
+	}
+
+	fieldset button {
+		color: #fff;
+		background-color: #55BBA7;
+		border-radius: 50px;
+		padding: 13px 8vw;
+		text-align: center;
+		letter-spacing: 0.9px;
+		text-decoration: none;
+		margin: 2vh auto;
+		display: block;
+		box-shadow: 0px 1px 3px 0px #55BBA7;
+		cursor: pointer;
+	}
+
+	.submit {
+		color: #fff;
+		background-color: #55BBA7;
+		border-radius: 3px;
+		padding: 13px 5vw;
+		text-align: center;
+		letter-spacing: 0.9px;
+		text-decoration: none;
+		margin: 2vh auto;
+		display: block;
+		box-shadow: 0px 1px 3px 0px #55BBA7;
+		cursor: pointer;
+	}
+
+	#link_to_edit {
+		padding-left: 45px;
+	}
+
+	.fieldset {
+		margin: 3% 5%;
+		padding: 3vw;
+		border-width: 25px;
+		border-style: ridge;
+		border-color: #257a7a;
+		box-shadow: 6px 13px 13px 0px black;
+		background-color: #ebfffa;
+	}
+	
+	
+	@media screen and (min-width: 768px) {
+		form fieldset {
+			width: 60%;
+			margin: 0 auto;
+		}
+	}
+	
+	@media screen and (min-width: 1024px) {
+		form fieldset {
+			width: 50%;
+		}
+	}
+</style>
+<body>
+    <h1 style="text-align:center; margin-top:50px;">Diabetes Prediction</h1>
+    <h5 style="text-align:center;">Please enter the patient details</h5>
+    <form action="{{ url_for('predictt')}}" method="post" class="form-inline" style=" background: linear-gradient(135deg, #8BC6EC, #9599E2);">
+        <fieldset style="background: linear-gradient(135deg, #FFFFFF, #F4F7FC); box-shadow: 6px 13px 13px 0px rgba(3, 0, 0, 0.3);">
+            <div class="tabcontent" id="new" class='mb-4'>
+                 <div class="form-group">
+                    <label for="pregnancies">Number of Pregnancies</label>
+                    <input class="form-control" type="number" name="pregnancies" placeholder="eg. 0 for male" required="required"/>
+                 </div>
+                  <div class="form-group">
+                    <label for="glucose">Glucose Level (mg/dL)</label>
+                    <input class="form-control" type="number" name="glucose" placeholder="eg. 80" required="required"/>
+                  </div>
+                  <div class="form-group">
+                    <label for="bloodpressure">Blood Pressure (mmHg)</label>
+                    <input class="form-control" type="number" name="bloodpressure" placeholder="eg. 80" required="required"/>
+                  </div>
+                  <div class="form-group">
+                    <label for="skinthickness">Skin Thickness (mm)</label>
+                     <input class="form-control" type="number" name="skinthickness" placeholder="eg. 20" required="required"/>
+                  </div>
+                  <div class="form-group">
+                    <label for="insulin">Insulin Level (IU/mL) </label>
+                    <input class="form-control" type="number" name="insulin" placeholder="eg. 80" required="required"/>
+                  </div>
+                  <div class="form-group">
+                    <label for="bmi">Body Mass Index (kg/m²)</label>
+                    <input class="form-control" type="number" name="bmi" placeholder="eg. 23.1" required="required"/>
+                  </div>
+                  <div class="form-group">
+                    <label for="dpf">Diabetes Pedigree Function</label>
+                    <input class="form-control" type="text" name="dpf" placeholder="eg. 0.52" required="required"/>
+                  </div>
+                  <div class="form-group">
+                    <label for="age">Patient Age in Years</label>
+                    <input class="form-control" type="number" name="age" placeholder="eg. 34" required="required"/>
+                  </div>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary mt-3 wow zoomIn">Predict</button>
+            </div>
+        </fieldset>
+    </form>
+
+	</div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+{% endblock %}

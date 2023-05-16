@@ -1,0 +1,250 @@
+
+{% extends 'base.html'%}
+
+{% block title %} About {% endblock %}
+{% block status3 %}active{% endblock %}
+
+{% block css %}
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta name="copyright" content="MACode ID, https://macodeid.com/">
+
+  <title>Dung-Tshap</title>
+
+  <link rel="stylesheet" href="../static/css/maicons.css">
+
+  <link rel="stylesheet" href="../static/css/bootstrap.css">
+
+  <link rel="stylesheet" href="../static/vendor/owl-carousel/css/owl.carousel.css">
+
+  <link rel="stylesheet" href="../static/vendor/animate/animate.css">
+
+  <link rel="stylesheet" href="../static/css/theme.css"> 
+
+{% endblock %}
+
+
+{% block body %}
+<style>
+  .Vhead,
+  .Mhead{
+    
+        text-align: center;
+  }
+  .vision,
+      .mission {
+        margin: 0 auto;
+        max-width: 700px;
+       
+        padding: 50px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+      }
+      
+      /* Style the vision statement */
+      .vision {
+        margin-top: 100px;
+        border-top: 5px solid #41a021;
+        text-align: center;
+      }
+      
+      .vision h2 {
+        font-size: 30px;
+        color: #41a021;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+      }
+      
+      .vision p {
+        font-size: 18px;
+        line-height: 1.5;
+        color: #666;
+        margin-bottom: 20px;
+      }
+      
+      /* Style the mission statement */
+      .mission {
+        margin-top: 50px;
+        border-top: 5px solid #4a90e2;
+      }
+      
+      .mission h2 {
+        font-size: 30px;
+        color: #4a90e2;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+      }
+      
+      .mission p {
+        font-size: 18px;
+        line-height: 1.5;
+        color: #666;
+        margin-bottom: 20px;
+      }
+      
+      /* Add media queries for responsiveness */
+      @media (max-width: 768px) {
+        .vision,
+        .mission {
+          max-width: 100%;
+          margin: 20px;
+        }
+      }
+</style>
+
+  <div class="page-banner overlay-dark bg-image" style="background-image: url(../static/img/conbg.jpg);">
+    <div class="banner-section">
+      <div class="container text-center wow fadeInUp">
+        <!-- <nav aria-label="Breadcrumb">
+          <ol class="breadcrumb breadcrumb-dark bg-transparent justify-content-center py-0 mb-2">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">About</li>
+          </ol>
+        </nav> -->
+        <h1 class="font-weight-normal">About Us</h1>
+      </div> <!-- .container -->
+    </div> <!-- .banner-section -->
+  </div> <!-- .page-banner -->
+
+  <div class="page-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 wow fadeInUp">
+          <h1 class="text-center mb-3">Who We Are?</h1>
+          <div class="text-lg">
+            <p>A Drung-Tshab system for medical institutions and patients to predict Disease and through chatting with our system can also general minor Disease for their use. Drung-Tshab started off as a PRJ303 that formed strong relationships with medical institutions and patients to help them generate their Diseases with
+              ease and maximum efficiency thus saving the organization's valuable time.
+              </p>
+          </div>
+          <br>
+          <br>
+        </div>
+       
+        <div class="col-lg-8 wow fadeInUp">
+        <h3 class="text-center mb-3">Our Heart</h3>
+        <div class="vision">
+          <h2 class="Vhead">Vision:</h2>
+          <p>To help medical institutions and patients to detect diseases early and recommend treatment according to the
+            prediction result.
+            </p>
+        </div>
+        <div class="mission">
+          <h2 class="Mhead">Mission:</h2>
+          <ul>
+            <li>To help patients in early disease detection and reduce checkup process</li>
+            <li>To help medical institutions</li>
+            <li>To save time</li>
+            <li>To save human resources and healthcost</li>
+          </ul>
+        </div>
+      </div>
+        <div class="col-lg-10 mt-5">
+          <h3 class="text-center mb-5 wow fadeInUp">Meet Our Team</h3>
+          <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4 wow zoomIn">
+              <div class="card-doctor">
+                <div class="header">
+                  <img src="../static/img/person/Sdeki.jpeg" alt="">
+    
+                </div>
+                <div class="body">
+                  <p class="text-xl mb-0">Ms. Sonam Deki</p>
+                  <span class="text-sm text-grey">Project Manager and Designer</span><br>
+                  <span class="text-sm text-grey">12200080.gcit@rub.edu.bt</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow zoomIn">
+              <div class="card-doctor">
+                <div class="header">
+                  <img src="../static/img/person/TJ.jpeg" alt="">
+                 
+                </div>
+                <div class="body">
+                  <p class="text-xl mb-0">Mr. Tandin Jamtsho</p>
+                  <span class="text-sm text-grey">Developer and Designer</span><br>
+                  <span class="text-sm text-grey">12200087.gcit@rub.edu.bt</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 wow zoomIn">
+              <div class="card-doctor">
+                <div class="header">
+                  <img src="../static/img/person/mtee.jpeg" alt="">
+                  
+                </div>
+                <div class="body">
+                  <p class="text-xl mb-0">Mr. Pema Dendup</p>
+                  <span class="text-sm text-grey">Developer</span><br>
+                  <span class="text-sm text-grey">12200070.gcit@rub.edu.bt</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 wow zoomIn">
+              <div class="card-doctor">
+                <div class="header">
+                  <img src="../static/img/person/tengel.jpg" alt="">
+                 
+                </div>
+                <div class="body">
+                  <p class="text-xl mb-0">Mr. Tenzin Gyeltshen</p>
+                  <span class="text-sm text-grey">Developer</span><br>
+                  <span class="text-sm text-grey">12200089.gcit@rub.edu.bt</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 wow zoomIn">
+              <div class="card-doctor">
+                <div class="header">
+                  <img src="../static/img/person/MJ.jpeg" alt="">
+                
+                </div>
+                <div class="body">
+                  <p class="text-xl mb-0">Mr. Tandin Wangchuk</p>
+                  <span class="text-sm text-grey">Developer</span><br>
+                  <span class="text-sm text-grey">12200088.gcit@rub.edu.bt</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-section banner-home bg-image" style="background-image: url(../static/img/banner-pattern.svg);">
+    <div class="container py-5 py-lg-0">
+      <div class="row align-items-center">
+        <div class="col-lg-4 wow zoomIn">
+          <div class="img-banner d-none d-lg-block">
+            <img src="../static/img/DR-bot.png" alt="">
+          </div>
+        </div>
+        <div class="col-lg-8 wow fadeInRight">
+          <h1 class="font-weight-normal mb-3">Get easy access to our DR-bot in Telegram using this link <a href="#">Dr-bot</a></h1>
+          
+        </div>
+      </div>
+    </div>
+  </div> <!-- .banner-home -->
+
+<script src="../static/js/jquery-3.5.1.min.js"></script>
+
+<script src="../static/js/bootstrap.bundle.min.js"></script>
+
+<script src="../static/vendor/owl-carousel/js/owl.carousel.min.js"></script>
+
+<script src="../static/vendor/wow/wow.min.js"></script>
+
+<script src="../static/js/theme.js"></script>
+
+{% endblock %}
+
+

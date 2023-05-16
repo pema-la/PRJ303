@@ -1,0 +1,250 @@
+{% extends 'base.html'%}
+
+{% block title %} service {% endblock %}
+{% block status2 %}active{% endblock %}
+
+
+{% block css %}
+
+<title>One Health - Medical Center HTML5 Template</title>
+
+<link rel="stylesheet" href="../static/css/maicons.css">
+
+<link rel="stylesheet" href="../static/css/bootstrap.css">
+
+<link rel="stylesheet" href="../static/vendor/owl-carousel/css/owl.carousel.css">
+
+<link rel="stylesheet" href="../static/vendor/animate/animate.css">
+
+<link rel="stylesheet" href="../static/css/theme.css">
+
+{% endblock %}
+
+{% block body %}
+
+  <div class="page-banner overlay-dark bg-image" style="background-image: url(../static/img/sebg.png);">
+    <div class="banner-section">
+      <div class="container text-center wow fadeInUp">
+        
+        <h1 class="font-weight-normal">Services</h1>
+      </div> <!-- .container -->
+    </div> <!-- .banner-section -->
+  </div> <!-- .page-banner -->
+  <br>
+  <br>
+  <div class="container text-center wow fadeInUp">
+       <h1 class="font-weight-normal">Welcome to Drung-Tshab Community Health</h1>
+       <p>Disease prediction applications can play an important role in promoting early detection, prevention, and management of diseases. Implementing machine learning in healthcare can lead to a significant increase in patient satisfaction. Instead of directly treating the patient, predicting the disease beforehand with machine learning algorithms can make the entire treatment process much more efficient.
+        <br> Click below to ask and know more.
+     </p>
+     <p><a class="btn btn-primary"  onclick="displayPopup()">Ask &raquo;</a></p>
+    
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class="container text-center wow fadeInUp">
+    <h3 class="font-weight-normal">What We Do?</h3>
+</div>
+  <div class="page-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="row">
+            <div class="col-sm-6 py-3">
+              <div class="card-blog">
+                <div class="header">
+                  <div class="post-category">
+                    <a>1</a>
+                  </div>
+                  <a class="post-thumb">
+                    <img src="../static/img/symtoms.jpg" alt="">
+                  </a>
+                </div>
+                <div class="body">
+              
+                    <p class="text-xl mb-0">Patients Symtoms</p>
+                    <span class="text-sm text-grey">We take Symtoms from the patients to prediction diseases.</span>
+              
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 py-3">
+              <div class="card-blog">
+                <div class="header">
+                  <div class="post-category">
+                    <a>2</a>
+                  </div>
+                  <a class="post-thumb">
+                    <img src="../static/img/DP.jpg" alt="">
+                  </a>
+                </div>
+                <div class="body">
+                  <p class="text-xl mb-0">Disease Prediction</p>
+                  <span class="text-sm text-grey">Help patients to predict diseases base on their symtoms</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 py-3">
+              <div class="card-blog">
+                <div class="header">
+                  <div class="post-category">
+                    <a>3</a>
+                  </div>
+                  <a class="post-thumb">
+                    <img src="../static/img/TR.png" alt="">
+                  </a>
+                </div>
+                <div class="body">
+                  <p class="text-xl mb-0">Treament Recommendations</p>
+                  <span class="text-sm text-grey">Give Recommendations according to results</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 py-3">
+              <div class="card-blog">
+                <div class="header">
+                  <div class="post-category">
+                    <a>4</a>
+                  </div>
+                  <a class="post-thumb">
+                    <img src="../static/img/livechat.png" alt="">
+                  </a>
+                </div>
+                <div class="body">
+                  <p class="text-xl mb-0">live chat</p>
+                  <span class="text-sm text-grey"> Let patients or user to chat with our system and give results through live chat</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 py-3">
+              <div class="card-blog">
+                <div class="header">
+                  <div class="post-category">
+                    <a>5</a>
+                  </div>
+                  <a class="post-thumb">
+                    <img src="../static/img/chat.jpeg" alt="">
+                  </a>
+                </div>
+                <div class="body">
+                  <p class="text-xl mb-0">Ease the work for medical institutions</p>
+                  <span class="text-sm text-grey">By automatically generate prediction for diseases.</span>
+                 
+                </div>
+              </div>
+            </div>
+      
+           
+            
+         
+
+          
+          </div> <!-- .row -->
+        </div>
+        <div class="col-lg-4">
+          <div class="sidebar">
+            <div class="sidebar-block">
+              <h3 class="sidebar-title">Categories</h3>
+              <ul class="categories">
+                <li>1. diabetes</li>
+                <li>2. Heart</li>
+                <li>3. Brain Tumor</li>
+                <li>4. breast Cancer</li>
+                <li>5. Minor diseases</li>
+              </ul>
+            </div>
+
+            <div class="sidebar-block">
+              <h3 class="sidebar-title">We offers the following services:</h3>
+              <div class="blog-item">
+                <a class="post-thumb">
+                  <img src="../static/img/brain.jpeg" alt="">
+                </a>
+                <div class="content">
+                  <p class="text-xl mb-0">Brain Tumor Prediction</p>
+                    <span class="text-sm text-grey">Collects MRI image of patients and predicts</span>
+                </div>
+              </div>
+              <div class="blog-item">
+                <a class="post-thumb">
+                  <img src="../static/img/heart.jpeg" alt="">
+                </a>
+                <div class="content">
+                  <p class="text-xl mb-0">Heart Disease Prediction</p>
+                  <span class="text-sm text-grey">Let user to fill the form and accoeding to it , prediction is done.</span>
+                </div>
+              </div>
+              <div class="blog-item">
+                <a class="post-thumb">
+                  <img src="../static/img/dia.jpeg" alt="">
+                </a>
+                <div class="content">
+                  <p class="text-xl mb-0">Diabetes Disease Prediction</p>
+                  <span class="text-sm text-grey">Let user to fill the form and accoeding to it , prediction is done.</span>
+                </div>
+              </div>
+              <div class="blog-item">
+                <a class="post-thumb">
+                  <img src="../static/img/bc.jpeg" alt="">
+                </a>
+                <div class="content">
+                  <p class="text-xl mb-0">Breast Cancer Prediction</p>
+                  <span class="text-sm text-grey">Let user to fill the form and accoeding to it , prediction is done.</span>
+                </div>
+              </div>
+              <div class="blog-item">
+                <a class="post-thumb">
+                  <img src="../static/img/Dr.png" alt="">
+                </a>
+                <div class="content">
+                  <p class="text-xl mb-0">Dr-Chat</p>
+                  <span class="text-sm text-grey">user can predict minor diseases throught interacting with system through chatbot</span>
+                </div>
+              </div>
+            </div>
+
+          
+
+        
+          </div>
+        </div> 
+      </div> <!-- .row -->
+    </div> <!-- .container -->
+  </div> <!-- .page-section -->
+
+  <div class="page-section banner-home bg-image" style="background-image: url(../static/img/banner-pattern.svg);">
+    <div class="container py-5 py-lg-0">
+      <div class="row align-items-center">
+        <div class="col-lg-4 wow zoomIn">
+          <div class="img-banner d-none d-lg-block">
+            <img src="../static/img/DR-bot.png" alt="">
+          </div>
+        </div>
+        <div class="col-lg-8 wow fadeInRight">
+          <h1 class="font-weight-normal mb-3">Get easy access to our DR-bot in Telegram using this link <a href="#">Dr-bot</a></h1>
+          
+        </div>
+      </div> <!-- .row -->
+    </div> <!-- .container -->
+  </div> <!-- .banner-home -->
+
+  <script>
+    function displayPopup() {
+      alert("Hello there! call#17680762 OR mail to 12200070.gcit@rub.edu.bt Thank you for using our system");
+    }
+  </script>
+
+<script src="../static/js/jquery-3.5.1.min.js"></script>
+
+<script src="../static/js/bootstrap.bundle.min.js"></script>
+
+<script src="../static/vendor/owl-carousel/js/owl.carousel.min.js"></script>
+
+<script src="../static/vendor/wow/wow.min.js"></script>
+
+<script src="../static/js/theme.js"></script>
+
+{% endblock %}

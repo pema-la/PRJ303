@@ -1,0 +1,375 @@
+{% extends 'base.html'%}
+
+{% block title %} Home {% endblock %}
+{% block status1 %}active{% endblock %}
+
+
+{% block css %} 
+
+<link rel="stylesheet" href="../static/css/maicons.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css')}}">
+
+<link rel="stylesheet" href="../static/vendor/owl-carousel/css/owl.carousel.css">
+
+<link rel="stylesheet" href="../static/vendor/animate/animate.css">
+
+<link rel="stylesheet" href="../static/css/theme.css">
+
+{% endblock %}
+
+{% block body %}
+<style>
+  #more {
+    display: none;
+  }
+  .circle-shape {
+    border: 2px solid #fff;
+    color: #fff;
+  }
+  .bi-brain {
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    padding: 0.5rem;
+  }
+  .circle-shape {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 2rem;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .circle-shape:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" integrity="sha384-Cf3Lw5N/4yEENfjr6NIS54pS/2K6LCEm9BGqH2ZhYcSqu5K20k2KTkk+xN0G93X3" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+
+<div class="page-hero bg-image overlay-dark" style="background-image: url(../static/img/bg.jpeg);">
+    <div class="hero-section">
+      <div class="container text-center wow zoomIn">
+        <span class="subhead">Let's make your life happier</span>
+        <h1 class="display-4">Health Guidance</h1>
+      </div>
+    </div>
+</div>
+
+
+  <div class="bg-light">
+    <div class="page-section py-3 mt-md-n5 custom-index">
+      <div class="container">
+        <div class="row justify-content-center">
+
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card-service wow fadeInUp">
+              <div class="circle-shape bg-primary text-white d-flex justify-content-center align-items-center">
+                <a href="/heart" ><img src="../static/img/hearttt.png" class="img-fluid"></a>
+              </div>
+              <p><a href="/heart" class="btn btn-primary"><span>Heart </span> Disease</a></p>
+            </div>
+          </div>
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card-service wow fadeInUp">
+              <div class="circle-shape bg-primary d-flex justify-content-center align-items-center">
+                <a href="/diabetes"><img src="../static/img/diab.png" class="img-fluid"></a>
+              </div>
+              <p><a href="/diabetes" class="btn btn-primary"><span>Diabetes</span> Disease</a></p>
+            </div>
+          </div>
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card-service wow fadeInUp">
+              <div class="circle-shape bg-primary text-white">
+               <a href="/BrainTumor"><img src="../static/img/bbbb.jpg" class="img-fluid"></a> 
+              </div>
+              <p><a href="/BrainTumor" class="btn btn-primary"><span>Brain </span> Tumor</a></p>
+            </div>
+          </div>
+          <div class="col-md-3 py-3 py-md-0">
+            <div class="card-service wow fadeInUp">
+              <div class="circle-shape bg-primary text-white">
+                <a  href="/BreastC"> <img src="../static/img/brbrbr.png" class="img-fluid"></a> 
+              </div>
+              <p><a href="/BreastC" class="btn btn-primary"><span>Breast</span> Cancer</a></p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div> <!-- .page-section -->
+
+    <div class="page-section pb-0">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 py-3 wow fadeInUp">
+            <h1>Welcome to Drung-Tshab <br> Disease Prediction</h1>
+            <p class="text-grey mb-4" >Disease prediction applications can play an important role in promoting early detection,
+              prevention, and management of diseases. Implementing machine learning in healthcare can lead to a significant increase in patient satisfaction. Instead of directly treating the patient, predicting the disease beforehand with machine learning algorithms can make the entire treatment process much more efficient.
+              </p>
+              <div id="more">
+                <p>A Drung-Tshab system for medical institutions and patients to predict Disease and through chatting with our system can also general minor Disease for their use. Drung-Tshab started off as a PRJ303 that formed strong relationships with medical institutions and patients to help them generate their Diseases with
+                  ease and maximum efficiency thus saving the organization's valuable time.</p>
+              </div>
+              <button class="btn btn-primary wow zoomIn" id="myBtn" onclick="myFunction()">Show more</button>
+          </div>
+          <div class="col-lg-6 wow fadeInRight" data-wow-delay="400ms">
+            <div class="img-place custom-img-1">
+              <img src="../static/img/bg-doctor.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- .bg-light -->
+  </div> <!-- .bg-light -->
+
+
+  <div class="page-section bg-light">
+    <div class="container">
+      <h1 class="text-center wow fadeInUp">Learn More about Diseases</h1>
+      <div class="row mt-5">
+        <div class="col-lg-4 py-2 wow zoomIn">
+          <div class="card-blog">
+            <div class="header">
+              <a href="/learn" class="post-thumb">
+                <img src="../static/img/heart.png" alt="">
+              </a>
+            </div>
+            <div class="body">
+              <h5 class="post-title"><a href="/learn">Heart Disease</a></h5>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 py-2 wow zoomIn">
+          <div class="card-blog">
+            <div class="header">
+            
+              <a href="/learn" class="post-thumb">
+                <img src="../static/img/brainT.jpg" alt="">
+              </a>
+            </div>
+            <div class="body">
+              <h5 class="post-title"><a href="/learn">BrainTumor Disease</a></h5>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 py-2 wow zoomIn">
+          <div class="card-blog">
+            <div class="header">
+             
+              <a href="/learn" class="post-thumb">
+                <img src="../static/img/breastcancer.jpg" alt="">
+              </a>
+            </div>
+            <div class="body">
+              <h5 class="post-title"><a href="/learn">Breast Cancer</a></h5>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 py-2 wow zoomIn">
+          <div class="card-blog">
+            <div class="header">
+              
+              <a href="/learn" class="post-thumb">
+                <img src="../static/img/diabetes.png" alt="">
+              </a>
+            </div>
+            <div class="body">
+              <h5 class="post-title"><a href="/learn">Diabetes Disease</a></h5>
+              
+            </div>
+          </div>
+        </div>
+    
+
+     
+
+      </div>
+    </div>
+  </div> <!-- .page-section -->
+
+  <div class="page-section">
+    <div class="container">
+      <h1 class="text-center wow fadeInUp">Why choose the Drung-Tshap?</h1>
+
+      <div class="col-lg-10 mt-5">
+        
+        <div class="row justify-content-center">
+          <div class="col-md-6 col-lg-4 wow zoomIn">
+            <div class="card-doctor">
+              <div class="header">
+                <h1>1</h1>
+                <img src="../static/img/schedule.png" alt="">
+              </div>
+              <div class="body">
+                <p class="text-xl mb-0">Flexible schedule</p>
+                <span class="text-sm text-grey">Patients can use our service at any time.</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 wow zoomIn">
+            <div class="card-doctor">
+              <div class="header">
+                <h1>2</h1>
+                <img src="../static/img/lowincome.jpg" alt="">
+              </div>
+              <div class="body">
+                <p class="text-xl mb-0">Assist to low income</p>
+                <span class="text-sm text-grey">We provide help to anyone irrespective of rich or poor.</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 wow zoomIn">
+            <div class="card-doctor">
+              <div class="header">
+                <h1>3</h1>
+                <img src="../static/img/EA.jpg" alt="">
+              </div>
+              <div class="body">
+                <p class="text-xl mb-0">Easy Access</p>
+                <span class="text-sm text-grey">Anyone can use our service from anywhere at anytime.</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 wow zoomIn">
+            <div class="card-doctor">
+              <div class="header">
+                <h1>4</h1>
+                <img src="../static/img/allage.webp" alt="">
+              </div>
+              <div class="body">
+                <p class="text-xl mb-0">Service to all age</p>
+                <span class="text-sm text-grey">Our service is not restricted to a specific age, everyone is equal.</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div> <!-- .page-section -->
+
+  
+  <div class="page-section">
+    <div class="container">
+      <h1 class="text-center mb-5 wow fadeInUp">Group Members</h1>
+
+      <div class="owl-carousel wow fadeInUp" id="doctorSlideshow">
+        <div class="item">
+          <div class="card-doctor">
+            <div class="header">
+              <img src="../static/img/person/TJ.jpeg" alt="">
+             
+            </div>
+            <div class="body">
+              <p class="text-xl mb-0">Tandin Jamtsho</p>
+              <span class="text-sm text-grey">Developer and Designer</span>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="card-doctor">
+            <div class="header">
+              <img src="../static/img/person/Sdeki.jpeg" alt="">
+             
+            </div>
+            <div class="body">
+              <p class="text-xl mb-0">Sonam Deki</p>
+              <span class="text-sm text-grey">Project Manager and Designer</span>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="card-doctor">
+            <div class="header">
+              <img src="../static/img/person/mtee.jpeg" alt="">
+             
+            </div>
+            <div class="body">
+              <p class="text-xl mb-0">Pema Dendup</p>
+              <span class="text-sm text-grey">Developer</span>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="card-doctor">
+            <div class="header">
+              <img src="../static/img/person/MJ.jpeg" alt="">
+              
+            </div>
+            <div class="body">
+              <p class="text-xl mb-0">Tandin Wangchuk</p>
+              <span class="text-sm text-grey">Developer</span>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="card-doctor">
+            <div class="header">
+              <img src="../static/img/person/tengel.jpg" alt="">
+             
+            </div>
+            <div class="body">
+              <p class="text-xl mb-0">Tenzin Gyeltshen</p>
+              <span class="text-sm text-grey">Developer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="page-section banner-home bg-image" style="background-image: url(../static/img/banner-pattern.svg);">
+    <div class="container py-5 py-lg-0">
+      <div class="row align-items-center">
+        <div class="col-lg-4 wow zoomIn">
+          <div class="img-banner d-none d-lg-block">
+            <img src="../static/img/DR-bot.png" alt="">
+          </div>
+        </div>
+        <div class="col-lg-8 wow fadeInRight">
+          <h1 class="font-weight-normal mb-3">Get easy access to our DR-bot in Telegram using this link <a href="#">Dr-bot</a></h1>
+        </div>
+      </div>
+    </div>
+  </div> <!-- .banner-home -->
+  
+
+  <script>
+		function myFunction() {
+		  var moreText = document.getElementById("more");
+		  var btnText = document.getElementById("myBtn");
+		  if (moreText.style.display === "block") {
+		    moreText.style.display = "none";
+		    btnText.innerHTML = "Show more";
+		  } else {
+		    moreText.style.display = "block";
+		    btnText.innerHTML = "Show less";
+		  }
+		}
+	</script>
+
+<script src="../static/js/jquery-3.5.1.min.js"></script>
+
+<script src="../static/js/bootstrap.bundle.min.js"></script>
+
+<script src="../static/vendor/owl-carousel/js/owl.carousel.min.js"></script>
+
+<script src="../static/vendor/wow/wow.min.js"></script>
+
+<script src="../static/js/theme.js"></script>
+{% endblock %}
