@@ -19,6 +19,5 @@ markupsafe
 itsdangerous==2.0.1
 pandas==1.2.4
 keras.models
-scikit-learn==0.24.2
 werkzeug.utils
 keras_preprocessing
