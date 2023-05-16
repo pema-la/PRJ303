@@ -50,7 +50,6 @@ os.environ["CUDA_VISIBLE_DEVICES"]="-1"
 
 app = Flask(__name__)  #instance of flask
 #app.debug = True
-server = app.server
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
