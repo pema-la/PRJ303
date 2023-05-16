@@ -15,3 +15,5 @@ gunicorn
 Pillow
 matplotlib
 jinja2<3.1.0
+markupsafe
+itsdangerous==2.0.1
