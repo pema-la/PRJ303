@@ -19,5 +19,4 @@ markupsafe
 itsdangerous==2.0.1
 pandas==1.2.4
 keras.models
-werkzeug.utils
 keras_preprocessing
